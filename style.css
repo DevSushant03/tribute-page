@@ -51,7 +51,7 @@ p{
   margin:10px
 }
 .outer-div {
-        width: 390px;
+        width:100%;
         height:250px;
         overflow-x: auto;
         white-space: nowrap;
