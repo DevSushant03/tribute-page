@@ -22,7 +22,12 @@ nav{
   z-index:1
   
 }
-h1{
+marquee{
+color:orange;
+  
+}
+
+  h1{
   color:#ff2600;
   font-family: "Poppins", sans-serif;
 }
