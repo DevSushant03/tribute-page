@@ -1,172 +1,345 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap')
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chhatrapati Shivaji Maharaj — The Lion of Maharashtra</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <audio autoplay>
-  <source src="lion.m4a" type="audio/ogg">
-  </audio>
-   <header>
-      <nav> 
-      <marquee
-  direction="right"
-  width="100%"
-  height="30"
-  behavior="alternate"
->
- जगदंब
-</marquee>     
-      </nav>
-   </header>
 
-  
-  <main>
-    <h1>
-      Chhatrapati <br/> Shivaji Maharaj 
-    </h1>
-    
-    <img class="csm" src="csm.png" />
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
-    <h2>About</h2>
+<!-- ═══════════════════════════════════════════ HERO -->
+<div id="hero">
+  <div class="hero-bg"></div>
+  <div class="stars" id="stars"></div>
 
-    <p>
-       Chhatrapati Shivaji Maharaj, a 17th-century Maratha warrior-king, is revered for his remarkable military and administrative achievements in the face of formidable adversaries. Born in 1630, he established the Maratha Empire, known for its strategic forts, innovative military tactics, and inclusive governance. Shivaji's legacy embodies courage, leadership, and a vision for a sovereign Maratha state in India.
-    </p>
+  <div class="hero-content">
+    <p class="devanagari-title" id="hero-devanagari">॥ जय भवानी — जय शिवाजी ॥</p>
+    <h1 class="hero-title" id="hero-title">Shivaji<br/>Maharaj</h1>
+    <p class="hero-subtitle" id="hero-subtitle">Chhatrapati · Lion of Maharashtra</p>
+    <p class="hero-years" id="hero-years">1630 — 1680</p>
+  </div>
 
-    <img class="childhood" src="childhood.webp" />
-    
-    <h2>Early life</h2>
+  <div class="scroll-indicator" id="scroll-indicator">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
 
-    <p>
-       Chhatrapati Shivaji Maharaj was born on April 10, 1627, in the hill fort of Shivneri, near Junnar in Pune district, Maharashtra. He was born into the Bhosle clan of Maratha origin. His father, Shahaji Bhosle, was a prominent Maratha general, and his mother, Jijabai, was a devout Hindu. Shivaji's upbringing was influenced by his mother's teachings of Hindu epics and valorous stories of Maratha warriors, instilling in him a strong sense of duty, courage, and pride in his heritage.
-    </p>
+  <div class="fort-silhouette"></div>
+</div>
 
-    <h2>Military Achievements</h2>
+<!-- Parallax marquee -->
+<div class="parallax-text dark-band" style="padding:2rem 0">
+  <div class="parallax-text-inner" id="marquee-text">
+    MARATHA &nbsp;&nbsp;&nbsp; EMPIRE &nbsp;&nbsp;&nbsp; MARATHA &nbsp;&nbsp;&nbsp; EMPIRE &nbsp;&nbsp;&nbsp; MARATHA &nbsp;&nbsp;&nbsp; EMPIRE &nbsp;&nbsp;&nbsp;
+  </div>
+</div>
 
-  <p>
-     Chhatrapati Shivaji Maharaj is renowned for his numerous military achievements, which transformed him into a legendary figure in Indian history. 
+<hr class="golden"/>
+
+<!-- ═══════════════════════════════════════════ ABOUT -->
+<section id="about" class="glow-left">
+  <p class="section-label" data-anim="fade-up">— The Warrior King</p>
+  <h2 class="section-title" data-anim="fade-up">Founder of the<br/>Maratha Empire</h2>
+  <p class="section-body" data-anim="fade-up">
+    Born on <strong style="color:var(--saffron)">February 19, 1630</strong>, in the fort of Shivneri in the Pune district of Maharashtra, Chhatrapati Shivaji Maharaj rose from a regional chieftain to one of the greatest warrior kings the Indian subcontinent has ever known. The son of the Maratha general Shahaji Bhosle and the deeply devout Jijabai, he was raised on the heroic tales of the Mahabharata and Ramayana — tales that shaped his iron will and unyielding spirit.
+  </p>
+  <br/>
+  <p class="section-body" data-anim="fade-up" style="animation-delay:0.1s">
+    Against the titanic forces of the Mughal Empire under Aurangzeb and the Adilshahi Sultanate of Bijapur, Shivaji carved out a sovereign Maratha kingdom through sheer brilliance — military genius, diplomatic cunning, and an unshakeable vision of <em style="color:var(--bright-gold)">Swarajya</em> (self-rule). He is remembered not merely as a king, but as a civilisational force.
   </p>
 
-  <div class="outer-div">
-    
-    <div id="A1" class="inner-div">
-      <h3>
-         Maratha Navy
-      </h3>
-      
-      <small>
-         Shivaji realized the importance of <br /> a strong navy and commissioned <br /> the building the first Indian <br /> Navy around 1654.He also <br /> established the maratha empire.
-    </small> <br />
-      <a href="https://en.m.wikipedia.org/wiki/Maratha_Navy">Read more</a>
+  <div class="stats-row">
+    <div class="stat-item" data-stat>
+      <span class="stat-num counter" data-target="350">0</span>
+      <span class="stat-label">Forts Under Command</span>
     </div>
-    
-    <div id="A2" class="inner-div">
-      <h3>
-         Guerrilla Warfare
-      </h3>
-      
-      <small>
-        Shivaji understood that facing the <br /> formidable Mughal Empire head-on <br /> was a  losing battle. Instead, he <br /> adopted a hit-and-run  use of <br /> guerrilla   warfare strategy.
-      </small> <br />
-      <a href="https://www.vedantu.com/blog/military-tactics-and-strategies-of-chhatrapati-shivaji-maharaj">Read more</a>
+    <div class="stat-item" data-stat>
+      <span class="stat-num counter" data-target="50">0</span>
+      <span class="stat-label">Years of Reign & War</span>
     </div>
-    <div id="A3" class="inner-div">
-      <h3>
-         Capture of fort
-      </h3>
-      
-      <small>
-         Battle of
-Sinhagad was one  of the <br /> first forts which Shivaji recaptured <br /> from the Mughals.Tanaji Malusare was <br /> killed, but the fort was captured by <br /> the Marathas.
-    </small> <br />
-      <a href="https://en.m.wikipedia.org/wiki/Battle_of_Sinhagad">Read more</a>
+    <div class="stat-item" data-stat>
+      <span class="stat-num counter" data-target="1674">0</span>
+      <span class="stat-label">Year of Coronation</span>
     </div>
-    
-  <div id="A4" class="inner-div">
-      <h3>
-         Battle of pratapgad
-      </h3>
-      
-      <small>
-The Battle of Pratapgad took place  <br /> on 10 November 1649 The battle was<br /> between the Maratha forces led by <br /> Chhatrapati Shivaji and the Bijapur <br /> troops under General Afzal Khan. 
-    </small> <br />
-      <a href="https://en.m.wikipedia.org/wiki/Battle_of_Pratapgarh">Read more</a>
+    <div class="stat-item" data-stat>
+      <span class="stat-num counter" data-target="4">0</span>
+      <span class="stat-label">Major Naval Fleets</span>
+    </div>
   </div>
-    
+</section>
+
+<hr class="golden"/>
+
+<!-- ═══════════════════════════════════════════ EARLY LIFE -->
+<div class="dark-band">
+  <section id="earlylife" style="padding-top:0;padding-bottom:0">
+    <p class="section-label" data-anim="fade-up">— Origins</p>
+    <h2 class="section-title" data-anim="fade-up">Early Life &<br/>Formation</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start" class="responsive-2col">
+      <div>
+        <p class="section-body" data-anim="fade-up">
+          Shivaji spent his childhood in Poona (Pune) under the guardianship of his mother Jijabai, who is credited as the architect of his character. A woman of extraordinary strength and devotion, she filled his mind with visions of a free Hindu kingdom. His tutor, Dadoji Kondadeo, provided him military and administrative training.
+        </p>
+        <br/>
+        <p class="section-body" data-anim="fade-up">
+          By the age of 15, Shivaji had already conquered his first fort — <strong style="color:var(--saffron)">Torna Fort</strong> in 1645. By 16, he captured Raigad. These weren't the acts of a reckless youth but the first moves of a strategic mastermind, using the wealth hidden in Torna to fund further expansion.
+        </p>
+      </div>
+      <div>
+        <div class="quote-block" data-anim="slide-left">
+          <p class="quote-text">"Of all the regrets of my life, the greatest is that I did not meet Shivaji."</p>
+          <p class="quote-attr">— Mughal Emperor Aurangzeb, attributed</p>
+        </div>
+        <div class="quote-block" data-anim="slide-left" style="margin-top:1rem">
+          <p class="quote-text">"Mountain Rat" — the name Mughal commanders used for Shivaji, grudgingly acknowledging his mastery of guerrilla warfare in the Sahyadri hills.</p>
+          <p class="quote-attr">— Historical Records</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<hr class="golden"/>
+
+<!-- ═══════════════════════════════════════════ TIMELINE -->
+<section id="timeline">
+  <p class="section-label" data-anim="fade-up">— Chronicle</p>
+  <h2 class="section-title" data-anim="fade-up">Life &<br/>Conquests</h2>
+  <div class="timeline">
+    <div class="timeline-item" data-timeline>
+      <p class="timeline-year">1630</p>
+      <p class="timeline-event">Birth at Shivneri Fort</p>
+      <p class="timeline-desc">Born to Shahaji Bhosle and Jijabai at the fort of Shivneri, Junnar, Maharashtra. Named Shivaji after the local deity Shivai Devi.</p>
+    </div>
+    <div class="timeline-item" data-timeline>
+      <p class="timeline-year">1645</p>
+      <p class="timeline-event">Capture of Torna Fort</p>
+      <p class="timeline-desc">At just 15, Shivaji captures Torna Fort from the Bijapur Sultanate — his first major military conquest and the symbolic beginning of Swarajya.</p>
+    </div>
+    <div class="timeline-item" data-timeline>
+      <p class="timeline-year">1659</p>
+      <p class="timeline-event">Battle of Pratapgad — Slaying of Afzal Khan</p>
+      <p class="timeline-desc">The Bijapur general Afzal Khan is sent to destroy Shivaji. Shivaji outmaneuvers and kills him at a parley, scattering the entire Bijapur army. A legendary moment of cool-headed bravery.</p>
+    </div>
+    <div class="timeline-item" data-timeline>
+      <p class="timeline-year">1660</p>
+      <p class="timeline-event">Battle of Pavan Khind — Baji Prabhu's Sacrifice</p>
+      <p class="timeline-desc">300 Maratha soldiers hold a mountain pass against 10,000 Bijapur forces so Shivaji can escape. Baji Prabhu Deshpande dies but ensures his king's survival — one of history's greatest last stands.</p>
+    </div>
+    <div class="timeline-item" data-timeline>
+      <p class="timeline-year">1666</p>
+      <p class="timeline-event">Daring Escape from Agra</p>
+      <p class="timeline-desc">Imprisoned by Aurangzeb at Agra Fort, Shivaji engineers one of history's most audacious escapes — hiding in sweet-boxes, disappearing through Mughal territory, and returning triumphant to Maharashtra.</p>
+    </div>
+    <div class="timeline-item" data-timeline>
+      <p class="timeline-year">1670</p>
+      <p class="timeline-event">Surat Looted Twice — Mughal Coffers Emptied</p>
+      <p class="timeline-desc">Shivaji raids Surat — the richest Mughal port — a second time, systematically transferring wealth that funds the expanding Maratha military machine.</p>
+    </div>
+    <div class="timeline-item" data-timeline>
+      <p class="timeline-year">1674</p>
+      <p class="timeline-event">Coronation at Raigad — Chhatrapati</p>
+      <p class="timeline-desc">In a magnificent ceremony at Raigad Fort, Shivaji is crowned Chhatrapati (sovereign emperor). He formally establishes the Maratha Empire with an independent royal seal and administration.</p>
+    </div>
+    <div class="timeline-item" data-timeline>
+      <p class="timeline-year">1680</p>
+      <p class="timeline-event">Mahaparinirvana</p>
+      <p class="timeline-desc">Chhatrapati Shivaji Maharaj passes away on April 3, 1680 at Raigad Fort at age 52. He left behind a kingdom, a navy, a code of governance, and a legend that has never dimmed.</p>
+    </div>
   </div>
-    <p>
-       These military achievements not only expanded Shivaji's Maratha Kingdom but also inspired future generations of Indian leaders in their struggles against colonial powers.
+</section>
+
+<hr class="golden"/>
+
+<!-- ═══════════════════════════════════════════ MILITARY -->
+<div class="dark-band">
+  <section id="military" style="padding-top:0;padding-bottom:0">
+    <p class="section-label" data-anim="fade-up">— Warfare</p>
+    <h2 class="section-title" data-anim="fade-up">Military<br/>Genius</h2>
+    <p class="section-body" data-anim="fade-up">
+      Shivaji revolutionized Indian warfare. Outnumbered and outgunned, he refused to fight on his enemies' terms. He invented new strategies, built new institutions, and trained a force of ferocious loyalty.
     </p>
+    <div class="achievement-grid" style="margin-top:2.5rem">
+      <div class="achievement-card" data-card>
+        <span class="card-num">01</span>
+        <h3 class="card-title">Ganimi Kava — Guerrilla Warfare</h3>
+        <p class="card-body">Shivaji mastered hit-and-run tactics in the Sahyadri mountain ranges. Small, mobile units would strike supply lines, isolated garrisons, and encampments — then vanish into the hills before retaliation was possible.</p>
+      </div>
+      <div class="achievement-card" data-card>
+        <span class="card-num">02</span>
+        <h3 class="card-title">Maratha Navy</h3>
+        <p class="card-body">Recognising that the Konkan coastline was Maharashtra's exposed flank, Shivaji built India's first organised indigenous navy around 1654. He commissioned warships, established coastal forts, and challenged the Portuguese and Siddi naval supremacy.</p>
+      </div>
+      <div class="achievement-card" data-card>
+        <span class="card-num">03</span>
+        <h3 class="card-title">Fort Strategy — 350 Fortresses</h3>
+        <p class="card-body">Shivaji understood that territory is held by whoever holds the high ground. He controlled over 350 forts — each a self-sustaining military base, granary, and refuge. His fort management system had no parallel in India.</p>
+      </div>
+      <div class="achievement-card" data-card>
+        <span class="card-num">04</span>
+        <h3 class="card-title">Intelligence Network</h3>
+        <p class="card-body">Shivaji maintained an elaborate network of spies — the Harkara and Bahirji Naik's corps — that infiltrated Mughal courts, Bijapur Sultanate, and Portuguese settlements. He always knew more about his enemies than they knew of him.</p>
+      </div>
+      <div class="achievement-card" data-card>
+        <span class="card-num">05</span>
+        <h3 class="card-title">Treatment of Women & Civilians</h3>
+        <p class="card-body">Shivaji's code of conduct was remarkably enlightened. He prohibited soldiers from harming women, children, or civilians during raids. Mosques were respected. Women of all religions were to be protected — an exceptional standard for the era.</p>
+      </div>
+      <div class="achievement-card" data-card>
+        <span class="card-num">06</span>
+        <h3 class="card-title">Battle of Kolhapur (1659)</h3>
+        <p class="card-body">After the Pratapgad victory, Shivaji routed the Bijapur Sultanate's army of 10,000 at Kolhapur with just 5,000 cavalry — a masterclass in flanking maneuvers and psychological warfare that broke the Adilshahi's will to fight.</p>
+      </div>
+    </div>
+  </section>
+</div>
 
-<h2>
-  Administrative and Governance
-</h2>
- <p>
-   Shivaji Maharaj introduced Maratha empire's Administration System commonly known as AshtaPradhan Mandal meaning “the council of eight” . The eight Ministerial roles were as follow. Pantpradhan or Peshwa - Prime minister , General Administrator of empire “Moropant Traymbak Pingle” was first Peshwa appointed by Shivaji.
- </p>
-    <img class="governance" src="governance.jpg" /> 
- <p>
-       Shivaji Maharaj developed an orderly administrative structure that was distinguished by strategic fort management, effective tax administration, and judicial reforms. In order to provide equitable taxation and stable economic conditions, he established a revenue system based on land assessment. His judicial reforms placed a strong emphasis on accessibility and impartiality, ensuring that everyone, regardless of status, could receive justice. Shivaji constructed a network of strongholds that functioned as command and administrative hubs by carefully managing forts to safeguard his domains. The Maratha Empire prospered because to its strong military, just courts, and efficient government.
+<hr class="golden"/>
+
+<!-- ═══════════════════════════════════════════ FORTS -->
+<section id="forts">
+  <p class="section-label" data-anim="fade-up">— The Stone Sentinels</p>
+  <h2 class="section-title" data-anim="fade-up">Legendary<br/>Forts</h2>
+  <p class="section-body" data-anim="fade-up">Shivaji's fortresses were not merely military installations — they were symbols of Maratha sovereignty, architectural marvels carved into living rock, and the beating heart of Swarajya.</p>
+  <div class="fort-grid">
+    <div class="fort-card" data-fort><p class="fort-name">Raigad</p><p class="fort-info">Capital of the Maratha Empire · Site of Coronation · 2700 ft</p></div>
+    <div class="fort-card" data-fort><p class="fort-name">Shivneri</p><p class="fort-info">Birthplace of Shivaji · Near Junnar, Pune · Sacred Site</p></div>
+    <div class="fort-card" data-fort><p class="fort-name">Torna</p><p class="fort-info">First Conquest (1645) · Sahyadri Range · Symbol of Swarajya's Dawn</p></div>
+    <div class="fort-card" data-fort><p class="fort-name">Sinhagad</p><p class="fort-info">Site of Tanaji Malusare's Sacrifice · Near Pune · Night Assault Legend</p></div>
+    <div class="fort-card" data-fort><p class="fort-name">Pratapgad</p><p class="fort-info">Battle of Pratapgad · Afzal Khan's Defeat · Satara District</p></div>
+    <div class="fort-card" data-fort><p class="fort-name">Vijaydurg</p><p class="fort-info">Naval Fort · Arabian Sea · Kankavali · Impenetrable Sea-Gate</p></div>
+    <div class="fort-card" data-fort><p class="fort-name">Murud-Janjira</p><p class="fort-info">The Unconquered Sea Fort · Shivaji's Great Adversary · Never Taken</p></div>
+    <div class="fort-card" data-fort><p class="fort-name">Panhala</p><p class="fort-info">Largest Fort · Site of Battle of Pavan Khind · Kolhapur District</p></div>
+  </div>
+</section>
+
+<hr class="golden"/>
+
+<!-- ═══════════════════════════════════════════ GOVERNANCE -->
+<div class="dark-band">
+  <section id="governance" style="padding-top:0;padding-bottom:0">
+    <p class="section-label" data-anim="fade-up">— Administration</p>
+    <h2 class="section-title" data-anim="fade-up">The Ashta Pradhan<br/>Council</h2>
+    <p class="section-body" data-anim="fade-up">
+      Shivaji created one of the most sophisticated governing systems of medieval India — the <strong style="color:var(--saffron)">Ashta Pradhan Mandal</strong>, a council of eight ministers each responsible for a specific domain of governance. He replaced the Persian-dominated administrative language with Marathi and Sanskrit, creating the <em>Rajyavyavahara Kosha</em> — a new political vocabulary for an Indian kingdom.
     </p>
-    
- <h2>
-Quotes and sayings
-</h2>
-    
- <img class="rajmudra" src="rajmudra.png" /> <br />
-    
-<i style="color:gold">RAJMUDRA</i> <br />
-    
-    <mark> प्रतिपत् चंद्र लेख इव वर्धिष्णुः विश्ववन्दिता। </mark> <br />
-    <mark>
-शाहसुनो शिवस्य एषा मुद्रा भद्राय राजते॥</mark>
-<ul>
-   <li>“Freedom is a boon, which everyone has the right to receive.”</li>
-  <li>“Never bend your head, always hold it high.” </li>
-  <li>“Do not think of the enemy as weak, but do not also overestimate their strength.”</li>
-  
-</ul>
+    <div class="achievement-grid" style="margin-top:2rem">
+      <div class="achievement-card" data-card><span class="card-num">॥</span><h3 class="card-title">Peshwa (Pantpradhan)</h3><p class="card-body">Prime Minister. General administrator of the empire. First appointee: Moropant Trimbak Pingle.</p></div>
+      <div class="achievement-card" data-card><span class="card-num">॥</span><h3 class="card-title">Amatya</h3><p class="card-body">Finance Minister. Managed revenue, treasury, and economic policy of the realm.</p></div>
+      <div class="achievement-card" data-card><span class="card-num">॥</span><h3 class="card-title">Senapati</h3><p class="card-body">Commander-in-Chief. Led military campaigns and commanded the Maratha armies.</p></div>
+      <div class="achievement-card" data-card><span class="card-num">॥</span><h3 class="card-title">Mantri</h3><p class="card-body">Royal chronicler and personal secretary. Maintained records and correspondence.</p></div>
+      <div class="achievement-card" data-card><span class="card-num">॥</span><h3 class="card-title">Sumant</h3><p class="card-body">Minister of Foreign Affairs. Handled diplomacy, treaties, and foreign relations.</p></div>
+      <div class="achievement-card" data-card><span class="card-num">॥</span><h3 class="card-title">Nyayadhish</h3><p class="card-body">Chief Justice. Oversaw judicial matters and ensured fair, accessible justice for all citizens.</p></div>
+      <div class="achievement-card" data-card><span class="card-num">॥</span><h3 class="card-title">Panditrao</h3><p class="card-body">Minister of Religious Affairs. Managed religious ceremonies, endowments, and charitable trusts.</p></div>
+      <div class="achievement-card" data-card><span class="card-num">॥</span><h3 class="card-title">Sachiv</h3><p class="card-body">Revenue Minister. Managed land administration, taxation, and the ryotwari system.</p></div>
+    </div>
+  </section>
+</div>
 
-    <h2>Important and impact <br /> on Indian history and culture </h2>
+<hr class="golden"/>
 
-    <p>
-       Chhatrapati Shivaji Maharaj's influence on Indian history and culture is profound. Hechallenging the mighty Mughal Empire and establishing a sovereign Maratha kingdom. His administration emphasized justice, religious tolerance, and welfare policies, laying the foundation for modern governance. Shivaji's valor and leadership continue to inspire generations, symbolizing resistance against oppression and the spirit of independence in Indian culture.
+<!-- ═══════════════════════════════════════════ RAJMUDRA -->
+<div class="rajmudra-section">
+  <p class="section-label" data-anim="fade-up" style="text-align:center">— The Royal Seal</p>
+  <h2 class="section-title" data-anim="fade-up" style="text-align:center">Rajmudra</h2>
+  <div class="rajmudra-ring">
+    <div class="rajmudra-inner">
+
+      <img src="rajmudra.png" alt="" srcset=""> 
+    </div>
+  </div>
+  <p class="sanskrit-verse" data-anim="fade-up" style="text-align:center">
+    प्रतिपत् चंद्र लेख इव वर्धिष्णुः विश्ववन्दिता।<br/>
+    शाहसुनो शिवस्य एषा मुद्रा भद्राय राजते॥
+  </p>
+  <p class="section-body" style="text-align:center;max-width:600px;margin:1.5rem auto 0;opacity:0" data-anim="fade-up">
+    <em>"Like the crescent moon of the first day (of the bright fortnight), ever-growing and worshipped by the universe — this seal of Shiva, son of Shah, shines for the welfare of the people."</em>
+  </p>
+</div>
+
+<hr class="golden"/>
+
+<!-- ═══════════════════════════════════════════ QUOTES -->
+<section id="quotes">
+  <p class="section-label" data-anim="fade-up">— Words of a King</p>
+  <h2 class="section-title" data-anim="fade-up">Timeless<br/>Wisdom</h2>
+  <div style="display:flex;flex-direction:column;gap:1.5rem">
+    <div class="quote-block" data-anim="slide-left">
+      <p class="quote-text">"Freedom is a boon, which everyone has the right to receive."</p>
+      <p class="quote-attr">— Chhatrapati Shivaji Maharaj</p>
+    </div>
+    <div class="quote-block" data-anim="slide-left">
+      <p class="quote-text">"Never bend your head, always hold it high."</p>
+      <p class="quote-attr">— Chhatrapati Shivaji Maharaj</p>
+    </div>
+    <div class="quote-block" data-anim="slide-left">
+      <p class="quote-text">"Do not think of the enemy as weak, but do not overestimate their strength either. Know them as they are."</p>
+      <p class="quote-attr">— Chhatrapati Shivaji Maharaj</p>
+    </div>
+    <div class="quote-block" data-anim="slide-left">
+      <p class="quote-text">"Even if there were a shop selling courage, I would have it purchased even by mortgaging this kingdom."</p>
+      <p class="quote-attr">— Chhatrapati Shivaji Maharaj</p>
+    </div>
+    <div class="quote-block" data-anim="slide-left">
+      <p class="quote-text">"Of all the regrets of my life, the greatest is that I did not meet Shivaji." </p>
+      <p class="quote-attr">— Emperor Aurangzeb (attributed)</p>
+    </div>
+  </div>
+</section>
+
+<hr class="golden"/>
+
+<!-- ═══════════════════════════════════════════ LEGACY -->
+<div class="dark-band">
+  <section id="legacy" style="padding-top:0;padding-bottom:0">
+    <p class="section-label" data-anim="fade-up">— Lasting Impact</p>
+    <h2 class="section-title" data-anim="fade-up">A Legacy That<br/>Never Fades</h2>
+    <p class="section-body" data-anim="fade-up">
+      Shivaji Maharaj's legacy transcends the boundaries of Maharashtra. He proved that an indigenous power could challenge and defeat the largest empires of his era through strategy, courage, and incorruptible ideals. His model of governance — secular, just, and welfare-oriented — was centuries ahead of its time.
     </p>
-  
-<img class="jagdamb" src="jagdamb.jpg" /> 
-    
-  </main>
+    <br/>
+    <p class="section-body" data-anim="fade-up">
+      The Maratha Empire he founded eventually controlled nearly 2.8 million km² of the Indian subcontinent at its peak under the Peshwas — the largest empire in India during the 18th century. His legacy directly inspired Indian independence leaders; Bal Gangadhar Tilak revived his memory through the <em style="color:var(--saffron)">Shiv Jayanti</em> festivals that galvanised millions against British rule.
+    </p>
+    <br/>
+    <p class="section-body" data-anim="fade-up">
+      Today, his equestrian statue stands at the entrance of the Arabian Sea in Mumbai — facing the ocean he once commanded with his warships. His name is chanted in Maharashtra's fields and cities alike: <strong style="color:var(--bright-gold); font-size:1.3rem">जय शिवाजी!</strong>
+    </p>
+  </section>
+</div>
 
+<!-- Final parallax text -->
+<div class="parallax-text dark-band" style="padding:2rem 0;border-top:1px solid rgba(255,103,0,0.1)">
+  <div class="parallax-text-inner" id="marquee-text-2" style="direction: rtl">
+    जय भवानी &nbsp;&nbsp;&nbsp; जय शिवाजी &nbsp;&nbsp;&nbsp; जय भवानी &nbsp;&nbsp;&nbsp; जय शिवाजी &nbsp;&nbsp;&nbsp; जय भवानी &nbsp;&nbsp;&nbsp;
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ FOOTER -->
 <footer>
-  
-  <h6>
-     Created by Sushant 
-  </h6>
-  <p>
-     This are some link you can visit and gain detailed information about maratha empire.
-  </p>
-  
-  <button href="https://en.m.wikipedia.org/wiki/Shivaji">Chhatrapati Shivaji Maharaj 
-  </button> <br />
-  <button href="https://en.m.wikipedia.org/wiki/Maratha_Empire">Maratha Empire 
-  </button>
-  <button href="https://en.m.wikipedia.org/wiki/Battles_involving_the_Maratha_Empire">All Battle
-  </button>
-  <button href="https://en.m.wikipedia.org/wiki/Shivaji%27s_forts">Forts
-  </button>
-  
+  <p class="footer-title">Chhatrapati Shivaji Maharaj</p>
+  <p class="footer-sub">1630 — 1680 &nbsp;·&nbsp; MAHARASHTRA, INDIA</p>
+  <div class="footer-links">
+    <a class="footer-link" href="https://en.wikipedia.org/wiki/Shivaji" target="_blank">Wikipedia — Shivaji</a>
+    <a class="footer-link" href="https://en.wikipedia.org/wiki/Maratha_Empire" target="_blank">Maratha Empire</a>
+    <a class="footer-link" href="https://en.wikipedia.org/wiki/Battles_involving_the_Maratha_Empire" target="_blank">All Battles</a>
+    <a class="footer-link" href="https://en.wikipedia.org/wiki/Shivaji%27s_forts" target="_blank">The Forts</a>
+    <a class="footer-link" href="https://en.wikipedia.org/wiki/Maratha_Navy" target="_blank">Maratha Navy</a>
+  </div>
+  <p class="footer-credit">Tribute by Sushant &nbsp;·&nbsp; Redesigned with reverence</p>
 </footer>
 
-  
-</body>
+<script src="script.js"></script>
 
+</body>
 </html>
